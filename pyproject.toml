@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "peace"
+version = "0.1.0"
+description = "Joint embeddings of Faust audio effect code and effected audio"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE", "licenses/*.txt"]
+authors = [{name = "David Braun"}]
+dependencies = [
+  "jax>=0.10.2,<0.11", "flax>=0.12.7,<0.13", "numpy>=2",
+  "audiotree>=1.0.0", "librosax>=0.1.2", "einops>=0.8",
+  "safetensors>=0.8", "huggingface-hub>=0.34",
+  "tokenizers>=0.21", "tree-sitter>=0.25", "tree-sitter-faust[core]>=1.2",
+]
+
+[project.optional-dependencies]
+render = ["dawdreamer==0.9.0"]
+test = ["pytest>=8", "dawdreamer==0.9.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/peace"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

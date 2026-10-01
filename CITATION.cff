@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use PEACE, please cite the paper below."
+title: "PEACE: Joint Embeddings of DSP Effects Code and Audio"
+type: software
+authors:
+  - family-names: Braun
+    given-names: David
+    email: braun@ccrma.stanford.edu
+    affiliation: "Princeton University"
+    orcid: "https://orcid.org/0000-0001-8866-0756"
+  - family-names: Finkelstein
+    given-names: Adam
+    orcid: "https://orcid.org/0000-0001-9130-8411"
+repository-code: "https://github.com/DBraun/PEACE"
+license: MIT
+version: 0.1.0
+keywords:
+  - audio effects
+  - Faust
+  - cross-modal retrieval
+  - joint embeddings
+  - music information retrieval
+preferred-citation:
+  type: conference-paper
+  title: "PEACE: Joint Embeddings of DSP Effects Code and Audio"
+  authors:
+    - family-names: Braun
+      given-names: David
+      email: braun@ccrma.stanford.edu
+      affiliation: "Princeton University"
+      orcid: "https://orcid.org/0000-0001-8866-0756"
+    - family-names: Finkelstein
+      given-names: Adam
+      orcid: "https://orcid.org/0000-0001-9130-8411"
+  collection-title: "Proceedings of the 27th International Society for Music Information Retrieval Conference"
+  conference:
+    name: "27th International Society for Music Information Retrieval Conference (ISMIR 2026)"
+    city: "Abu Dhabi"
+    country: AE
+    location: "Abu Dhabi, UAE"
+  year: 2026
+  month: 11

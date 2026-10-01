@@ -1,0 +1,804 @@
+{
+  "effects": [
+    {
+      "name": "AutoPan",
+      "function": "autopan",
+      "parameters": [
+        {
+          "name": "amount",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "rate",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "phase",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "shape",
+          "kind": "float",
+          "default": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Chorus",
+      "function": "chorus",
+      "parameters": [
+        {
+          "name": "rate",
+          "kind": "float",
+          "default": 0.35
+        },
+        {
+          "name": "delay1",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "delay2",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "depth",
+          "kind": "float",
+          "default": 1.0
+        },
+        {
+          "name": "feedback",
+          "kind": "float",
+          "default": 0.15
+        },
+        {
+          "name": "lpf",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Compressor",
+      "function": "compressor",
+      "parameters": [
+        {
+          "name": "attack",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "release",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "gain_low",
+          "kind": "float",
+          "default": 0.77
+        },
+        {
+          "name": "gain_band",
+          "kind": "float",
+          "default": 0.7
+        },
+        {
+          "name": "gain_high",
+          "kind": "float",
+          "default": 0.77
+        },
+        {
+          "name": "lower_ratio_low",
+          "kind": "float",
+          "default": 0.9
+        },
+        {
+          "name": "lower_ratio_band",
+          "kind": "float",
+          "default": 0.9
+        },
+        {
+          "name": "lower_ratio_high",
+          "kind": "float",
+          "default": 0.9
+        },
+        {
+          "name": "upper_ratio_low",
+          "kind": "float",
+          "default": 0.95
+        },
+        {
+          "name": "upper_ratio_band",
+          "kind": "float",
+          "default": 0.92
+        },
+        {
+          "name": "upper_ratio_high",
+          "kind": "float",
+          "default": 1.0
+        },
+        {
+          "name": "lower_threshold_low",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "lower_threshold_band",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "lower_threshold_high",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "upper_threshold_low",
+          "kind": "float",
+          "default": 0.58
+        },
+        {
+          "name": "upper_threshold_band",
+          "kind": "float",
+          "default": 0.57
+        },
+        {
+          "name": "upper_threshold_high",
+          "kind": "float",
+          "default": 0.58
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Delay",
+      "function": "delay",
+      "parameters": [
+        {
+          "name": "Mode",
+          "kind": "int",
+          "default": 0,
+          "num_values": 3
+        },
+        {
+          "name": "Feedback",
+          "kind": "float",
+          "default": 0.4
+        },
+        {
+          "name": "DelayL",
+          "kind": "float",
+          "default": 0.05
+        },
+        {
+          "name": "DelayLScale",
+          "kind": "float",
+          "default": 0.6
+        },
+        {
+          "name": "DelayR",
+          "kind": "float",
+          "default": 0.05
+        },
+        {
+          "name": "DelayRScale",
+          "kind": "float",
+          "default": 0.6
+        },
+        {
+          "name": "Freq",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "Bandwidth",
+          "kind": "float",
+          "default": 0.05
+        },
+        {
+          "name": "Mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Distortion",
+      "function": "distortion",
+      "parameters": [
+        {
+          "name": "filterMode",
+          "kind": "int",
+          "default": 0,
+          "num_values": 3
+        },
+        {
+          "name": "distortionMode",
+          "kind": "int",
+          "default": 0,
+          "num_values": 6
+        },
+        {
+          "name": "freq",
+          "kind": "float",
+          "default": 1.0
+        },
+        {
+          "name": "q",
+          "kind": "float",
+          "default": 1.0
+        },
+        {
+          "name": "style",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "drive",
+          "kind": "float",
+          "default": 0.167
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "EQ",
+      "function": "eq",
+      "parameters": [
+        {
+          "name": "modeLow",
+          "kind": "int",
+          "default": 1,
+          "num_values": 3
+        },
+        {
+          "name": "freqLow",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "qLow",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "gainLow",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "modeHigh",
+          "kind": "int",
+          "default": 1,
+          "num_values": 3
+        },
+        {
+          "name": "freqHigh",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "qHigh",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "gainHigh",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Filter",
+      "function": "filter",
+      "parameters": [
+        {
+          "name": "mode",
+          "kind": "int",
+          "default": 0,
+          "num_values": 18
+        },
+        {
+          "name": "cutoff",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "res",
+          "kind": "float",
+          "default": 0.1
+        },
+        {
+          "name": "drive",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "other",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Flanger",
+      "function": "flanger",
+      "parameters": [
+        {
+          "name": "rate",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "dflange",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "odflange",
+          "kind": "float",
+          "default": 0.05
+        },
+        {
+          "name": "depth",
+          "kind": "float",
+          "default": 0.1
+        },
+        {
+          "name": "feedback",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Gate",
+      "function": "gate",
+      "parameters": [
+        {
+          "name": "threshold",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "attack",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "hold",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "release",
+          "kind": "float",
+          "default": 0.5
+        }
+      ]
+    },
+    {
+      "name": "KlonCentaur",
+      "function": "klonCentaur",
+      "parameters": [
+        {
+          "name": "gain",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "treble",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "level",
+          "kind": "float",
+          "default": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Limiter",
+      "function": "limiter",
+      "parameters": [
+        {
+          "name": "gain",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "ceiling",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "attack",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "hold",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "release",
+          "kind": "float",
+          "default": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Panner",
+      "function": "panner",
+      "parameters": [
+        {
+          "name": "pan",
+          "kind": "float",
+          "default": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Phaser",
+      "function": "phaser",
+      "parameters": [
+        {
+          "name": "rate",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "notchDepth",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "feedback",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "notchWidth",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "minNotchFreq",
+          "kind": "float",
+          "default": 0.05
+        },
+        {
+          "name": "maxNotchFreq",
+          "kind": "float",
+          "default": 0.85
+        },
+        {
+          "name": "notchFreqRatio",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "PitchShift",
+      "function": "pitchshift",
+      "parameters": [
+        {
+          "name": "grainSize",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "pitch",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ReverbDattorro",
+      "function": "reverb_dattorro",
+      "parameters": [
+        {
+          "name": "in_bw",
+          "kind": "float",
+          "default": 0.7
+        },
+        {
+          "name": "in_diffusion1",
+          "kind": "float",
+          "default": 0.625
+        },
+        {
+          "name": "in_diffusion2",
+          "kind": "float",
+          "default": 0.625
+        },
+        {
+          "name": "d_diff1",
+          "kind": "float",
+          "default": 0.625
+        },
+        {
+          "name": "d_diff2",
+          "kind": "float",
+          "default": 0.625
+        },
+        {
+          "name": "decay",
+          "kind": "float",
+          "default": 0.7
+        },
+        {
+          "name": "damping",
+          "kind": "float",
+          "default": 0.625
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ReverbFreeverb",
+      "function": "reverb_freeverb",
+      "parameters": [
+        {
+          "name": "damp",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "roomSize",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "stereoSpread",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ReverbSpring",
+      "function": "reverb_spring",
+      "parameters": [
+        {
+          "name": "Dwell",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "Tone",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "Tension",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "Springs",
+          "kind": "int",
+          "default": 1,
+          "num_values": 3
+        },
+        {
+          "name": "Mix",
+          "kind": "float",
+          "default": 0.5
+        }
+      ]
+    },
+    {
+      "name": "ReverbVital",
+      "function": "reverb_vital",
+      "parameters": [
+        {
+          "name": "prelow",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "prehigh",
+          "kind": "float",
+          "default": 0.79
+        },
+        {
+          "name": "lowcutoff",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "highcutoff",
+          "kind": "float",
+          "default": 0.62
+        },
+        {
+          "name": "lowGain",
+          "kind": "float",
+          "default": 1.0
+        },
+        {
+          "name": "highGain",
+          "kind": "float",
+          "default": 0.83
+        },
+        {
+          "name": "chorus_amt",
+          "kind": "float",
+          "default": 0.01
+        },
+        {
+          "name": "chorus_freq",
+          "kind": "float",
+          "default": 0.1
+        },
+        {
+          "name": "predelay",
+          "kind": "float",
+          "default": 0.0
+        },
+        {
+          "name": "time",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "size",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ReverbZita",
+      "function": "reverb_zita",
+      "parameters": [
+        {
+          "name": "inDelay",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "LFX",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "lowRT60",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "midRT60",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "hfdamping",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "eq1freq",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "eq1level",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "eq2freq",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "eq2level",
+          "kind": "float",
+          "default": 0.5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "ReverseEcho",
+      "function": "reverse_echo",
+      "parameters": [
+        {
+          "name": "delayL",
+          "kind": "int",
+          "default": 4,
+          "num_values": 5
+        },
+        {
+          "name": "delayR",
+          "kind": "int",
+          "default": 4,
+          "num_values": 5
+        },
+        {
+          "name": "mix",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    },
+    {
+      "name": "StereoWidth",
+      "function": "stereo_width",
+      "parameters": [
+        {
+          "name": "width",
+          "kind": "float",
+          "default": 1.0
+        }
+      ]
+    }
+  ]
+}

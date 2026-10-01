@@ -1,0 +1,67 @@
+The PEACE audio encoder reimplements the AFx-Rep architecture from ST-ITO
+(https://github.com/csteinmetz1/st-ito), whose CNN14 backbone derives from PANNs
+(https://github.com/qiuqiangkong/audioset_tagging_cnn).
+
+ST-ITO is licensed under the Apache License, Version 2.0 (attribution: Christian
+J. Steinmetz). The license text is included in licenses/Apache-2.0.txt. The
+released PEACE weights train this architecture from scratch and do not contain
+the pretrained AFx-Rep weights.
+
+PANNs is released under the MIT License:
+
+    Copyright (c) 2018-2020 Qiuqiang Kong
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+The T5 code encoder implements the T5 v1.1 encoder architecture (Raffel et al.,
+2020, https://github.com/google-research/text-to-text-transfer-transformer).
+The released T5 weights are fine-tuned from google/t5-v1_1-small
+(https://huggingface.co/google/t5-v1_1-small), and the tokenizer.json shipped
+with them is converted from that model's SentencePiece vocabulary. Both are
+licensed under the Apache License, Version 2.0 (attribution: Google); the
+license text is included in licenses/Apache-2.0.txt.
+
+The training objective follows SLAP (Guinot et al., 2025). The projector and
+predictor heads here are an independent implementation; no SLAP source code is
+included.
+
+------------------------------------------------------------------------------
+FAUST EFFECT SOURCES (src/peace/dsp)
+
+The effects import the Faust standard libraries (https://github.com/grame-cncm/
+faustlibraries, GRAME), which are not included. Files adapted from those
+libraries or from other projects keep their original terms:
+
+- compressor.dsp: a Faust port of the compressor in the Vital synthesizer
+  (https://github.com/mtytel/vital), Copyright 2013-2019 Matt Tytel, licensed
+  under the GNU General Public License, version 3 or later. The license text is
+  in licenses/GPL-3.0.txt.
+- reverb_spring.dsp: adapted from re.springreverb by Daniel Leonov in the Faust
+  libraries (reverbs.lib), whose demo declares the MIT license.
+- flanger.dsp and phaser.dsp: adapted from the flanger and phaser demos by
+  Julius O. Smith III in the Faust libraries (demos.lib, GRAME, LGPL).
+- reverb_freeverb.dsp: adapted from freeverb_demo by Romain Michon in the Faust
+  libraries.
+- reverb_zita.dsp: adapted from zita_rev1 by Julius O. Smith III in the Faust
+  libraries.
+- klonCentaur.dsp, reverb_dattorro.dsp, and reverb_vital.dsp call library
+  functions (ve.klonCentaur, a BSD 3-Clause port of Chowdhury-DSP's ChowCentaur;
+  re.dattorro_rev; re.vital_rev) and contain no code from them.
+
+The remaining effect sources are original to this project and MIT-licensed.
